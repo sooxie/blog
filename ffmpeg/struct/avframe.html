@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>AVFrame | sooxie</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="blog">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.b6bfb1ac.css" as="style"><link rel="preload" href="/blog/assets/js/app.2b1dd648.js" as="script"><link rel="preload" href="/blog/assets/js/2.9d35f1e7.js" as="script"><link rel="preload" href="/blog/assets/js/35.a2ec2d50.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.05c0c0f2.js"><link rel="prefetch" href="/blog/assets/js/11.80a46aca.js"><link rel="prefetch" href="/blog/assets/js/12.c3bb0779.js"><link rel="prefetch" href="/blog/assets/js/13.0ac6bf96.js"><link rel="prefetch" href="/blog/assets/js/14.4a902ab0.js"><link rel="prefetch" href="/blog/assets/js/15.e3b1de22.js"><link rel="prefetch" href="/blog/assets/js/16.a55bdbe8.js"><link rel="prefetch" href="/blog/assets/js/17.ccc303f1.js"><link rel="prefetch" href="/blog/assets/js/18.434a4e7e.js"><link rel="prefetch" href="/blog/assets/js/19.2c8625c2.js"><link rel="prefetch" href="/blog/assets/js/20.74d5efe1.js"><link rel="prefetch" href="/blog/assets/js/21.1935b90a.js"><link rel="prefetch" href="/blog/assets/js/22.922aaf91.js"><link rel="prefetch" href="/blog/assets/js/23.87709697.js"><link rel="prefetch" href="/blog/assets/js/24.1a78ec94.js"><link rel="prefetch" href="/blog/assets/js/25.c7b87c99.js"><link rel="prefetch" href="/blog/assets/js/26.b89ac752.js"><link rel="prefetch" href="/blog/assets/js/27.9fca9731.js"><link rel="prefetch" href="/blog/assets/js/28.d03624e3.js"><link rel="prefetch" href="/blog/assets/js/29.e6a8c56a.js"><link rel="prefetch" href="/blog/assets/js/3.c1504772.js"><link rel="prefetch" href="/blog/assets/js/30.ab747e65.js"><link rel="prefetch" href="/blog/assets/js/31.93caa551.js"><link rel="prefetch" href="/blog/assets/js/32.a33dfa2e.js"><link rel="prefetch" href="/blog/assets/js/33.116287a2.js"><link rel="prefetch" href="/blog/assets/js/34.7e9bef1c.js"><link rel="prefetch" href="/blog/assets/js/36.2a0380a0.js"><link rel="prefetch" href="/blog/assets/js/37.26cec5ab.js"><link rel="prefetch" href="/blog/assets/js/38.3bfeb8c0.js"><link rel="prefetch" href="/blog/assets/js/39.26da52be.js"><link rel="prefetch" href="/blog/assets/js/4.bd52d1aa.js"><link rel="prefetch" href="/blog/assets/js/40.ce882dac.js"><link rel="prefetch" href="/blog/assets/js/41.c87b78f9.js"><link rel="prefetch" href="/blog/assets/js/42.53bf9ffc.js"><link rel="prefetch" href="/blog/assets/js/43.ed3e5bd5.js"><link rel="prefetch" href="/blog/assets/js/44.47c9d096.js"><link rel="prefetch" href="/blog/assets/js/45.ac18124c.js"><link rel="prefetch" href="/blog/assets/js/46.dd742084.js"><link rel="prefetch" href="/blog/assets/js/47.e7176f5d.js"><link rel="prefetch" href="/blog/assets/js/48.c3abcfe0.js"><link rel="prefetch" href="/blog/assets/js/49.5089961f.js"><link rel="prefetch" href="/blog/assets/js/5.ac3fab13.js"><link rel="prefetch" href="/blog/assets/js/50.d5d60fa4.js"><link rel="prefetch" href="/blog/assets/js/51.33229a8a.js"><link rel="prefetch" href="/blog/assets/js/52.fae1aa29.js"><link rel="prefetch" href="/blog/assets/js/53.0af5c4fe.js"><link rel="prefetch" href="/blog/assets/js/54.a57bd936.js"><link rel="prefetch" href="/blog/assets/js/55.9698e9d2.js"><link rel="prefetch" href="/blog/assets/js/56.578098ec.js"><link rel="prefetch" href="/blog/assets/js/57.b829bc2b.js"><link rel="prefetch" href="/blog/assets/js/58.b55e06c9.js"><link rel="prefetch" href="/blog/assets/js/59.da4a3e55.js"><link rel="prefetch" href="/blog/assets/js/6.16bd1611.js"><link rel="prefetch" href="/blog/assets/js/60.0210415a.js"><link rel="prefetch" href="/blog/assets/js/61.0a06d51b.js"><link rel="prefetch" href="/blog/assets/js/62.d43e2aa9.js"><link rel="prefetch" href="/blog/assets/js/63.324d4d98.js"><link rel="prefetch" href="/blog/assets/js/64.04ef7635.js"><link rel="prefetch" href="/blog/assets/js/65.6446e418.js"><link rel="prefetch" href="/blog/assets/js/66.8585aa25.js"><link rel="prefetch" href="/blog/assets/js/67.dfeaefd5.js"><link rel="prefetch" href="/blog/assets/js/68.924c834d.js"><link rel="prefetch" href="/blog/assets/js/69.abbce79f.js"><link rel="prefetch" href="/blog/assets/js/7.05726647.js"><link rel="prefetch" href="/blog/assets/js/70.ed425a23.js"><link rel="prefetch" href="/blog/assets/js/71.05125181.js"><link rel="prefetch" href="/blog/assets/js/72.7b1273f0.js"><link rel="prefetch" href="/blog/assets/js/73.7a1c2600.js"><link rel="prefetch" href="/blog/assets/js/74.bb73b474.js"><link rel="prefetch" href="/blog/assets/js/75.2407e93c.js"><link rel="prefetch" href="/blog/assets/js/76.299197e3.js"><link rel="prefetch" href="/blog/assets/js/77.9ec19bb4.js"><link rel="prefetch" href="/blog/assets/js/78.3bb869bc.js"><link rel="prefetch" href="/blog/assets/js/79.6f77bf35.js"><link rel="prefetch" href="/blog/assets/js/8.2d11f171.js"><link rel="prefetch" href="/blog/assets/js/80.02f43f83.js"><link rel="prefetch" href="/blog/assets/js/81.c0d9fa63.js"><link rel="prefetch" href="/blog/assets/js/82.b9491bae.js"><link rel="prefetch" href="/blog/assets/js/83.722b7b32.js"><link rel="prefetch" href="/blog/assets/js/84.93872ad4.js"><link rel="prefetch" href="/blog/assets/js/85.1f86f81d.js"><link rel="prefetch" href="/blog/assets/js/86.fc0605c4.js"><link rel="prefetch" href="/blog/assets/js/87.e1448029.js"><link rel="prefetch" href="/blog/assets/js/88.e53fcbb2.js"><link rel="prefetch" href="/blog/assets/js/89.8f6cfaa6.js"><link rel="prefetch" href="/blog/assets/js/9.798fb69f.js"><link rel="prefetch" href="/blog/assets/js/90.600e1df3.js"><link rel="prefetch" href="/blog/assets/js/91.c6ece35b.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.b6bfb1ac.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">sooxie</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/ios/" class="nav-link">
+  iOS
+</a></div><div class="nav-item"><a href="/blog/web/" class="nav-link">
+  前端
+</a></div><div class="nav-item"><a href="/blog/ffmpeg/" class="nav-link router-link-active">
+  ffmpeg
+</a></div><div class="nav-item"><a href="/blog/opengl/" class="nav-link">
+  OpenGL
+</a></div><div class="nav-item"><a href="/blog/computer/" class="nav-link">
+  基础
+</a></div><div class="nav-item"><a href="/blog/algorithm/" class="nav-link">
+  Algorithm
+</a></div><div class="nav-item"><a href="/blog/version/" class="nav-link">
+  版本控制
+</a></div><div class="nav-item"><a href="/blog/interview/" class="nav-link">
+  面试
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/ios/" class="nav-link">
+  iOS
+</a></div><div class="nav-item"><a href="/blog/web/" class="nav-link">
+  前端
+</a></div><div class="nav-item"><a href="/blog/ffmpeg/" class="nav-link router-link-active">
+  ffmpeg
+</a></div><div class="nav-item"><a href="/blog/opengl/" class="nav-link">
+  OpenGL
+</a></div><div class="nav-item"><a href="/blog/computer/" class="nav-link">
+  基础
+</a></div><div class="nav-item"><a href="/blog/algorithm/" class="nav-link">
+  Algorithm
+</a></div><div class="nav-item"><a href="/blog/version/" class="nav-link">
+  版本控制
+</a></div><div class="nav-item"><a href="/blog/interview/" class="nav-link">
+  面试
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>ffmpeg</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>ffmpeg命令</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>ffmpeg重要结构体</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/ffmpeg/struct/avframe.html" aria-current="page" class="active sidebar-link">AVFrame</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/ffmpeg/struct/avframe.html#简介" class="sidebar-link">简介</a></li><li class="sidebar-sub-header"><a href="/blog/ffmpeg/struct/avframe.html#重要变量" class="sidebar-link">重要变量</a></li></ul></li><li><a href="/blog/ffmpeg/struct/avpackt.html" class="sidebar-link">AVPacket</a></li><li><a href="/blog/ffmpeg/struct/avfmt_ctx.html" class="sidebar-link">AVFormatContext</a></li><li><a href="/blog/ffmpeg/struct/avcodec_ctx.html" class="sidebar-link">AVCodecContext</a></li><li><a href="/blog/ffmpeg/struct/avio_ctx.html" class="sidebar-link">AVIOContext</a></li><li><a href="/blog/ffmpeg/struct/avcodec.html" class="sidebar-link">AVCodec</a></li><li><a href="/blog/ffmpeg/struct/avstream.html" class="sidebar-link">AVStream</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>解码</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>ffmpeg文件</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>YUV播放器</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>环境配置</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="avframe"><a href="#avframe" class="header-anchor">#</a> AVFrame</h1> <h2 id="简介"><a href="#简介" class="header-anchor">#</a> 简介</h2> <p>这个结构描述解码(原始)音频或视频数据。</p> <p>AVFrame结构体一般用于存储原始数据（即非压缩数据，例如对视频来说是YUV，RGB，对音频来说是PCM），此外还包含了一些相关的信息。比如说，解码的时候存储了宏块类型表，QP表，运动矢量表等数据。编码的时候也存储了相关的数据</p> <ul><li><p>av_frame_alloc()
+AVFrame必须使用av_frame_alloc()来分配。注意，这仅仅是分配AVFrame本身，数据的缓冲区必须被管理
+*透过其他途径(见下文)</p></li> <li><p>av_frame_free()
+AVFrame必须通过av_frame_free()释放</p></li> <li><p>AVFrame通常被分配一次，然后重复使用多次来保存不同的数据(例如，一个单独的AVFrame保存从解码器接收到的帧)。在这种情况下，av_frame_unref()将释放帧持有的所有引用，并在再次重用之前将其重置为原始的干净状态。</p></li> <li><p>AVFrame描述的数据通常通过AVBuffer API进行引用计数。底层缓冲区引用存储在AVFrame.buf /AVFrame.extended_buf。一个AVFrame被认为是引用计数，如果至少有一个引用被设置，即AVFrame.buf[0] != NULL。在这种情况下，每个数据平面必须包含在AVFrame的一个AVFrame.buf或AVFrame.extended_buf。所有数据可以有一个单独的缓冲区，或者每个平面有一个单独的缓冲区，或者两者之间的任何东西。</p></li> <li><p>sizeof(AVFrame)不是公共ABI的一部分，所以新的字段可能会添加到末尾，并有一个小的凸起。</p></li> <li><p>字段可以通过AVOptions访问，使用的名称字符串，匹配C结构字段名通过AVOptions访问的字段。AVFrame的AVClass可以从avcodec_get_frame_class()中获取</p></li></ul> <div class="language-c extra-class"><pre class="language-c"><code><span class="token keyword">typedef</span> <span class="token keyword">struct</span> <span class="token class-name">AVFrame</span> <span class="token punctuation">{</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">AV_NUM_DATA_POINTERS</span> <span class="token expression"><span class="token number">8</span></span></span>
+    <span class="token comment">/**
+     * pointer to the picture/channel planes.
+     * This might be different from the first allocated byte
+     *
+     * Some decoders access areas outside 0,0 - width,height, please
+     * see avcodec_align_dimensions2(). Some filters and swscale can read
+     * up to 16 bytes beyond the planes, if these filters are to be used,
+     * then 16 extra bytes must be allocated.
+     *
+     * NOTE: Except for hwaccel formats, pointers not needed by the format
+     * MUST be set to NULL.
+     */</span>
+    <span class="token class-name">uint8_t</span> <span class="token operator">*</span>data<span class="token punctuation">[</span>AV_NUM_DATA_POINTERS<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * For video, size in bytes of each picture line.
+     * For audio, size in bytes of each plane.
+     *
+     * For audio, only linesize[0] may be set. For planar audio, each channel
+     * plane must be the same size.
+     *
+     * For video the linesizes should be multiples of the CPUs alignment
+     * preference, this is 16 or 32 for modern desktop CPUs.
+     * Some code requires such alignment other code can be slower without
+     * correct alignment, for yet other it makes no difference.
+     *
+     * @note The linesize may be larger than the size of usable data -- there
+     * may be extra padding present for performance reasons.
+     */</span>
+    <span class="token keyword">int</span> linesize<span class="token punctuation">[</span>AV_NUM_DATA_POINTERS<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * pointers to the data planes/channels.
+     *
+     * For video, this should simply point to data[].
+     *
+     * For planar audio, each channel has a separate data pointer, and
+     * linesize[0] contains the size of each channel buffer.
+     * For packed audio, there is just one data pointer, and linesize[0]
+     * contains the total size of the buffer for all channels.
+     *
+     * Note: Both data and extended_data should always be set in a valid frame,
+     * but for planar audio with more channels that can fit in data,
+     * extended_data must be used in order to access all channels.
+     */</span>
+    <span class="token class-name">uint8_t</span> <span class="token operator">*</span><span class="token operator">*</span>extended_data<span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * @name Video dimensions
+     * Video frames only. The coded dimensions (in pixels) of the video frame,
+     * i.e. the size of the rectangle that contains some well-defined values.
+     *
+     * @note The part of the frame intended for display/presentation is further
+     * restricted by the @ref cropping &quot;Cropping rectangle&quot;.
+     * @{
+     */</span>
+    <span class="token keyword">int</span> width<span class="token punctuation">,</span> height<span class="token punctuation">;</span>
+    <span class="token comment">/**
+     * @}
+     */</span>
+
+    <span class="token comment">/**
+     * number of audio samples (per channel) described by this frame
+     */</span>
+    <span class="token keyword">int</span> nb_samples<span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * format of the frame, -1 if unknown or unset
+     * Values correspond to enum AVPixelFormat for video frames,
+     * enum AVSampleFormat for audio)
+     */</span>
+    <span class="token keyword">int</span> format<span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * 1 -&gt; keyframe, 0-&gt; not
+     */</span>
+    <span class="token keyword">int</span> key_frame<span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * Picture type of the frame.
+     */</span>
+    <span class="token keyword">enum</span> <span class="token class-name">AVPictureType</span> pict_type<span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * Sample aspect ratio for the video frame, 0/1 if unknown/unspecified.
+     */</span>
+    AVRational sample_aspect_ratio<span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * Presentation timestamp in time_base units (time when frame should be shown to user).
+     */</span>
+    <span class="token class-name">int64_t</span> pts<span class="token punctuation">;</span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">if</span> <span class="token expression">FF_API_PKT_PTS</span></span>
+    <span class="token comment">/**
+     * PTS copied from the AVPacket that was decoded to produce this frame.
+     * @deprecated use the pts field instead
+     */</span>
+    attribute_deprecated
+    <span class="token class-name">int64_t</span> pkt_pts<span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+
+    <span class="token comment">/**
+     * DTS copied from the AVPacket that triggered returning this frame. (if frame threading isn't used)
+     * This is also the Presentation time of this AVFrame calculated from
+     * only AVPacket.dts values without pts values.
+     */</span>
+    <span class="token class-name">int64_t</span> pkt_dts<span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * picture number in bitstream order
+     */</span>
+    <span class="token keyword">int</span> coded_picture_number<span class="token punctuation">;</span>
+    <span class="token comment">/**
+     * picture number in display order
+     */</span>
+    <span class="token keyword">int</span> display_picture_number<span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * quality (between 1 (good) and FF_LAMBDA_MAX (bad))
+     */</span>
+    <span class="token keyword">int</span> quality<span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * for some private data of the user
+     */</span>
+    <span class="token keyword">void</span> <span class="token operator">*</span>opaque<span class="token punctuation">;</span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">if</span> <span class="token expression">FF_API_ERROR_FRAME</span></span>
+    <span class="token comment">/**
+     * @deprecated unused
+     */</span>
+    attribute_deprecated
+    <span class="token class-name">uint64_t</span> error<span class="token punctuation">[</span>AV_NUM_DATA_POINTERS<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+
+    <span class="token comment">/**
+     * When decoding, this signals how much the picture must be delayed.
+     * extra_delay = repeat_pict / (2*fps)
+     */</span>
+    <span class="token keyword">int</span> repeat_pict<span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * The content of the picture is interlaced.
+     */</span>
+    <span class="token keyword">int</span> interlaced_frame<span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * If the content is interlaced, is top field displayed first.
+     */</span>
+    <span class="token keyword">int</span> top_field_first<span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * Tell user application that palette has changed from previous frame.
+     */</span>
+    <span class="token keyword">int</span> palette_has_changed<span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * reordered opaque 64 bits (generally an integer or a double precision float
+     * PTS but can be anything).
+     * The user sets AVCodecContext.reordered_opaque to represent the input at
+     * that time,
+     * the decoder reorders values as needed and sets AVFrame.reordered_opaque
+     * to exactly one of the values provided by the user through AVCodecContext.reordered_opaque
+     */</span>
+    <span class="token class-name">int64_t</span> reordered_opaque<span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * Sample rate of the audio data.
+     */</span>
+    <span class="token keyword">int</span> sample_rate<span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * Channel layout of the audio data.
+     */</span>
+    <span class="token class-name">uint64_t</span> channel_layout<span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * AVBuffer references backing the data for this frame. If all elements of
+     * this array are NULL, then this frame is not reference counted. This array
+     * must be filled contiguously -- if buf[i] is non-NULL then buf[j] must
+     * also be non-NULL for all j &lt; i.
+     *
+     * There may be at most one AVBuffer per data plane, so for video this array
+     * always contains all the references. For planar audio with more than
+     * AV_NUM_DATA_POINTERS channels, there may be more buffers than can fit in
+     * this array. Then the extra AVBufferRef pointers are stored in the
+     * extended_buf array.
+     */</span>
+    AVBufferRef <span class="token operator">*</span>buf<span class="token punctuation">[</span>AV_NUM_DATA_POINTERS<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * For planar audio which requires more than AV_NUM_DATA_POINTERS
+     * AVBufferRef pointers, this array will hold all the references which
+     * cannot fit into AVFrame.buf.
+     *
+     * Note that this is different from AVFrame.extended_data, which always
+     * contains all the pointers. This array only contains the extra pointers,
+     * which cannot fit into AVFrame.buf.
+     *
+     * This array is always allocated using av_malloc() by whoever constructs
+     * the frame. It is freed in av_frame_unref().
+     */</span>
+    AVBufferRef <span class="token operator">*</span><span class="token operator">*</span>extended_buf<span class="token punctuation">;</span>
+    <span class="token comment">/**
+     * Number of elements in extended_buf.
+     */</span>
+    <span class="token keyword">int</span>        nb_extended_buf<span class="token punctuation">;</span>
+
+    AVFrameSideData <span class="token operator">*</span><span class="token operator">*</span>side_data<span class="token punctuation">;</span>
+    <span class="token keyword">int</span>            nb_side_data<span class="token punctuation">;</span>
+
+<span class="token comment">/**
+ * @defgroup lavu_frame_flags AV_FRAME_FLAGS
+ * @ingroup lavu_frame
+ * Flags describing additional frame properties.
+ *
+ * @{
+ */</span>
+
+<span class="token comment">/**
+ * The frame data may be corrupted, e.g. due to decoding errors.
+ */</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">AV_FRAME_FLAG_CORRUPT</span>       <span class="token expression"><span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">&lt;&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span></span></span>
+<span class="token comment">/**
+ * A flag to mark the frames which need to be decoded, but shouldn't be output.
+ */</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">AV_FRAME_FLAG_DISCARD</span>   <span class="token expression"><span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">&lt;&lt;</span> <span class="token number">2</span><span class="token punctuation">)</span></span></span>
+<span class="token comment">/**
+ * @}
+ */</span>
+
+    <span class="token comment">/**
+     * Frame flags, a combination of @ref lavu_frame_flags
+     */</span>
+    <span class="token keyword">int</span> flags<span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * MPEG vs JPEG YUV range.
+     * - encoding: Set by user
+     * - decoding: Set by libavcodec
+     */</span>
+    <span class="token keyword">enum</span> <span class="token class-name">AVColorRange</span> color_range<span class="token punctuation">;</span>
+
+    <span class="token keyword">enum</span> <span class="token class-name">AVColorPrimaries</span> color_primaries<span class="token punctuation">;</span>
+
+    <span class="token keyword">enum</span> <span class="token class-name">AVColorTransferCharacteristic</span> color_trc<span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * YUV colorspace type.
+     * - encoding: Set by user
+     * - decoding: Set by libavcodec
+     */</span>
+    <span class="token keyword">enum</span> <span class="token class-name">AVColorSpace</span> colorspace<span class="token punctuation">;</span>
+
+    <span class="token keyword">enum</span> <span class="token class-name">AVChromaLocation</span> chroma_location<span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * frame timestamp estimated using various heuristics, in stream time base
+     * - encoding: unused
+     * - decoding: set by libavcodec, read by user.
+     */</span>
+    <span class="token class-name">int64_t</span> best_effort_timestamp<span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * reordered pos from the last AVPacket that has been input into the decoder
+     * - encoding: unused
+     * - decoding: Read by user.
+     */</span>
+    <span class="token class-name">int64_t</span> pkt_pos<span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * duration of the corresponding packet, expressed in
+     * AVStream-&gt;time_base units, 0 if unknown.
+     * - encoding: unused
+     * - decoding: Read by user.
+     */</span>
+    <span class="token class-name">int64_t</span> pkt_duration<span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * metadata.
+     * - encoding: Set by user.
+     * - decoding: Set by libavcodec.
+     */</span>
+    AVDictionary <span class="token operator">*</span>metadata<span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * decode error flags of the frame, set to a combination of
+     * FF_DECODE_ERROR_xxx flags if the decoder produced a frame, but there
+     * were errors during the decoding.
+     * - encoding: unused
+     * - decoding: set by libavcodec, read by user.
+     */</span>
+    <span class="token keyword">int</span> decode_error_flags<span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">FF_DECODE_ERROR_INVALID_BITSTREAM</span>   <span class="token expression"><span class="token number">1</span></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">FF_DECODE_ERROR_MISSING_REFERENCE</span>   <span class="token expression"><span class="token number">2</span></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">FF_DECODE_ERROR_CONCEALMENT_ACTIVE</span>  <span class="token expression"><span class="token number">4</span></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">FF_DECODE_ERROR_DECODE_SLICES</span>       <span class="token expression"><span class="token number">8</span></span></span>
+
+    <span class="token comment">/**
+     * number of audio channels, only used for audio.
+     * - encoding: unused
+     * - decoding: Read by user.
+     */</span>
+    <span class="token keyword">int</span> channels<span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * size of the corresponding packet containing the compressed
+     * frame.
+     * It is set to a negative value if unknown.
+     * - encoding: unused
+     * - decoding: set by libavcodec, read by user.
+     */</span>
+    <span class="token keyword">int</span> pkt_size<span class="token punctuation">;</span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">if</span> <span class="token expression">FF_API_FRAME_QP</span></span>
+    <span class="token comment">/**
+     * QP table
+     */</span>
+    attribute_deprecated
+    <span class="token class-name">int8_t</span> <span class="token operator">*</span>qscale_table<span class="token punctuation">;</span>
+    <span class="token comment">/**
+     * QP store stride
+     */</span>
+    attribute_deprecated
+    <span class="token keyword">int</span> qstride<span class="token punctuation">;</span>
+
+    attribute_deprecated
+    <span class="token keyword">int</span> qscale_type<span class="token punctuation">;</span>
+
+    attribute_deprecated
+    AVBufferRef <span class="token operator">*</span>qp_table_buf<span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+    <span class="token comment">/**
+     * For hwaccel-format frames, this should be a reference to the
+     * AVHWFramesContext describing the frame.
+     */</span>
+    AVBufferRef <span class="token operator">*</span>hw_frames_ctx<span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * AVBufferRef for free use by the API user. FFmpeg will never check the
+     * contents of the buffer ref. FFmpeg calls av_buffer_unref() on it when
+     * the frame is unreferenced. av_frame_copy_props() calls create a new
+     * reference with av_buffer_ref() for the target frame's opaque_ref field.
+     *
+     * This is unrelated to the opaque field, although it serves a similar
+     * purpose.
+     */</span>
+    AVBufferRef <span class="token operator">*</span>opaque_ref<span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * @anchor cropping
+     * @name Cropping
+     * Video frames only. The number of pixels to discard from the the
+     * top/bottom/left/right border of the frame to obtain the sub-rectangle of
+     * the frame intended for presentation.
+     * @{
+     */</span>
+    <span class="token class-name">size_t</span> crop_top<span class="token punctuation">;</span>
+    <span class="token class-name">size_t</span> crop_bottom<span class="token punctuation">;</span>
+    <span class="token class-name">size_t</span> crop_left<span class="token punctuation">;</span>
+    <span class="token class-name">size_t</span> crop_right<span class="token punctuation">;</span>
+    <span class="token comment">/**
+     * @}
+     */</span>
+
+    <span class="token comment">/**
+     * AVBufferRef for internal use by a single libav* library.
+     * Must not be used to transfer data between libraries.
+     * Has to be NULL when ownership of the frame leaves the respective library.
+     *
+     * Code outside the FFmpeg libs should never check or change the contents of the buffer ref.
+     *
+     * FFmpeg calls av_buffer_unref() on it when the frame is unreferenced.
+     * av_frame_copy_props() calls create a new reference with av_buffer_ref()
+     * for the target frame's private_ref field.
+     */</span>
+    AVBufferRef <span class="token operator">*</span>private_ref<span class="token punctuation">;</span>
+<span class="token punctuation">}</span> AVFrame<span class="token punctuation">;</span>
+
+
+</code></pre></div><h2 id="重要变量"><a href="#重要变量" class="header-anchor">#</a> 重要变量</h2> <h3 id="uint8-t-data-av-num-data-pointers"><a href="#uint8-t-data-av-num-data-pointers" class="header-anchor">#</a> uint8_t *data[AV_NUM_DATA_POINTERS]</h3> <p>存储解码后原始数据 ,YUV、RGB、PCM</p> <ul><li>packed格式数据,存到data[0]里面</li> <li>planar格式数据,会分开成data[0]，data[1]，data[2]...。YUV420P中data[0]存Y，data[1]存U，data[2]存V）</li></ul> <h3 id="int-linesize-av-num-data-pointers"><a href="#int-linesize-av-num-data-pointers" class="header-anchor">#</a> int linesize[AV_NUM_DATA_POINTERS]</h3> <p>注意：未必等于图像的宽，一般大于图像的宽</p> <ul><li>对于视频，大小在字节的每个图片行。</li> <li>对于音频，大小为每个平面的字节。</li></ul> <h3 id="int-width-height"><a href="#int-width-height" class="header-anchor">#</a> int width, height;</h3> <p>视频帧宽高</p> <h3 id="int-nb-samples"><a href="#int-nb-samples" class="header-anchor">#</a> int nb_samples;</h3> <p>此帧所描述的音频采样数(每通道),一个AVFrame中可能包含多个音频帧</p> <h3 id="int-format"><a href="#int-format" class="header-anchor">#</a> int format;</h3> <ul><li>format of the frame, -1 if unknown or unset Values correspond to enum AVPixelFormat for video frames,enum AVSampleFormat for audio)</li> <li>音视频的格式，枚举类型AVPixelFormat，AVSampleFormat</li></ul> <h3 id="int-key-frame"><a href="#int-key-frame" class="header-anchor">#</a> int key_frame;</h3> <ul><li>1 -&gt; keyframe, 0-&gt; not</li> <li>是否为关键帧</li></ul> <h3 id="enum-avpicturetype-pict-type"><a href="#enum-avpicturetype-pict-type" class="header-anchor">#</a> enum AVPictureType pict_type;</h3> <ul><li><p>Picture type of the frame.</p></li> <li><p>帧类型，I、P、B</p></li></ul> <h3 id="avrational-sample-aspect-ratio"><a href="#avrational-sample-aspect-ratio" class="header-anchor">#</a> AVRational sample_aspect_ratio;</h3> <ul><li>Sample aspect ratio for the video frame, 0/1 if unknown/unspecified.</li> <li>视频帧的样例宽高比，0/1(未知/未指定)。</li></ul> <h3 id="int64-t-pts"><a href="#int64-t-pts" class="header-anchor">#</a> int64_t pts;</h3> <ul><li>Presentation timestamp in time_base units (time when frame should be shown to user).</li> <li>帧显示的时间</li></ul> <h3 id="int64-t-pkt-dts"><a href="#int64-t-pkt-dts" class="header-anchor">#</a> int64_t pkt_dts;</h3> <ul><li>DTS copied from the AVPacket that triggered returning this frame. (if frame threading isn't used) . This is also the Presentation time of this AVFrame calculated fromonly AVPacket.dts values without pts values.</li> <li>从触发返回帧的AVPacket复制的DTS。(如果框架线程没有被使用)。这也是由AVPacket计算出的AVFrame的表示时间。没有PTS值的DTS值。</li></ul> <h3 id="int-coded-picture-number"><a href="#int-coded-picture-number" class="header-anchor">#</a> int coded_picture_number;</h3> <ul><li>picture number in bitstream order</li> <li>编码帧序号</li></ul> <h3 id="int-display-picture-number"><a href="#int-display-picture-number" class="header-anchor">#</a> int display_picture_number;</h3> <ul><li>picture number in display order</li> <li>显示帧序号</li></ul> <h3 id="int-sample-rate"><a href="#int-sample-rate" class="header-anchor">#</a> int sample_rate;</h3> <ul><li>Sample rate of the audio data.</li> <li>音频采样率</li></ul> <h3 id="uint64-t-channel-layout"><a href="#uint64-t-channel-layout" class="header-anchor">#</a> uint64_t channel_layout;</h3> <ul><li>Channel layout of the audio data.</li> <li>音频数据的声道布局。 AV_CH_LAYOUT_STEREO</li></ul> <h3 id="avbufferref-buf-av-num-data-pointers"><a href="#avbufferref-buf-av-num-data-pointers" class="header-anchor">#</a> AVBufferRef *buf[AV_NUM_DATA_POINTERS];</h3> <h3 id="int-channels"><a href="#int-channels" class="header-anchor">#</a> int channels;</h3> <p>number of audio channels, only used for audio.  encoding: unused; decoding: Read by user.</p> <ul><li>音频通道数，仅用于音频</li></ul> <h3 id="int-pkt-size"><a href="#int-pkt-size" class="header-anchor">#</a> int pkt_size;</h3> <ul><li>size of the corresponding packet containing the compressed frame. It is set to a negative value if unknown. <strong>encoding: unused</strong>; <strong>decoding: set by libavcodec, read by user.</strong></li> <li>帧大小</li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/ffmpeg/cmd/ffprobe_cmd.html" class="prev">
+        ffprobe命令
+      </a></span> <span class="next"><a href="/blog/ffmpeg/struct/avpackt.html">
+        AVPacket
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/blog/assets/js/app.2b1dd648.js" defer></script><script src="/blog/assets/js/2.9d35f1e7.js" defer></script><script src="/blog/assets/js/35.a2ec2d50.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>autorelease自动释放池 | sooxie</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="blog">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.b6bfb1ac.css" as="style"><link rel="preload" href="/blog/assets/js/app.2b1dd648.js" as="script"><link rel="preload" href="/blog/assets/js/2.9d35f1e7.js" as="script"><link rel="preload" href="/blog/assets/js/64.04ef7635.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.05c0c0f2.js"><link rel="prefetch" href="/blog/assets/js/11.80a46aca.js"><link rel="prefetch" href="/blog/assets/js/12.c3bb0779.js"><link rel="prefetch" href="/blog/assets/js/13.0ac6bf96.js"><link rel="prefetch" href="/blog/assets/js/14.4a902ab0.js"><link rel="prefetch" href="/blog/assets/js/15.e3b1de22.js"><link rel="prefetch" href="/blog/assets/js/16.a55bdbe8.js"><link rel="prefetch" href="/blog/assets/js/17.ccc303f1.js"><link rel="prefetch" href="/blog/assets/js/18.434a4e7e.js"><link rel="prefetch" href="/blog/assets/js/19.2c8625c2.js"><link rel="prefetch" href="/blog/assets/js/20.74d5efe1.js"><link rel="prefetch" href="/blog/assets/js/21.1935b90a.js"><link rel="prefetch" href="/blog/assets/js/22.922aaf91.js"><link rel="prefetch" href="/blog/assets/js/23.87709697.js"><link rel="prefetch" href="/blog/assets/js/24.1a78ec94.js"><link rel="prefetch" href="/blog/assets/js/25.c7b87c99.js"><link rel="prefetch" href="/blog/assets/js/26.b89ac752.js"><link rel="prefetch" href="/blog/assets/js/27.9fca9731.js"><link rel="prefetch" href="/blog/assets/js/28.d03624e3.js"><link rel="prefetch" href="/blog/assets/js/29.e6a8c56a.js"><link rel="prefetch" href="/blog/assets/js/3.c1504772.js"><link rel="prefetch" href="/blog/assets/js/30.ab747e65.js"><link rel="prefetch" href="/blog/assets/js/31.93caa551.js"><link rel="prefetch" href="/blog/assets/js/32.a33dfa2e.js"><link rel="prefetch" href="/blog/assets/js/33.116287a2.js"><link rel="prefetch" href="/blog/assets/js/34.7e9bef1c.js"><link rel="prefetch" href="/blog/assets/js/35.a2ec2d50.js"><link rel="prefetch" href="/blog/assets/js/36.2a0380a0.js"><link rel="prefetch" href="/blog/assets/js/37.26cec5ab.js"><link rel="prefetch" href="/blog/assets/js/38.3bfeb8c0.js"><link rel="prefetch" href="/blog/assets/js/39.26da52be.js"><link rel="prefetch" href="/blog/assets/js/4.bd52d1aa.js"><link rel="prefetch" href="/blog/assets/js/40.ce882dac.js"><link rel="prefetch" href="/blog/assets/js/41.c87b78f9.js"><link rel="prefetch" href="/blog/assets/js/42.53bf9ffc.js"><link rel="prefetch" href="/blog/assets/js/43.ed3e5bd5.js"><link rel="prefetch" href="/blog/assets/js/44.47c9d096.js"><link rel="prefetch" href="/blog/assets/js/45.ac18124c.js"><link rel="prefetch" href="/blog/assets/js/46.dd742084.js"><link rel="prefetch" href="/blog/assets/js/47.e7176f5d.js"><link rel="prefetch" href="/blog/assets/js/48.c3abcfe0.js"><link rel="prefetch" href="/blog/assets/js/49.5089961f.js"><link rel="prefetch" href="/blog/assets/js/5.ac3fab13.js"><link rel="prefetch" href="/blog/assets/js/50.d5d60fa4.js"><link rel="prefetch" href="/blog/assets/js/51.33229a8a.js"><link rel="prefetch" href="/blog/assets/js/52.fae1aa29.js"><link rel="prefetch" href="/blog/assets/js/53.0af5c4fe.js"><link rel="prefetch" href="/blog/assets/js/54.a57bd936.js"><link rel="prefetch" href="/blog/assets/js/55.9698e9d2.js"><link rel="prefetch" href="/blog/assets/js/56.578098ec.js"><link rel="prefetch" href="/blog/assets/js/57.b829bc2b.js"><link rel="prefetch" href="/blog/assets/js/58.b55e06c9.js"><link rel="prefetch" href="/blog/assets/js/59.da4a3e55.js"><link rel="prefetch" href="/blog/assets/js/6.16bd1611.js"><link rel="prefetch" href="/blog/assets/js/60.0210415a.js"><link rel="prefetch" href="/blog/assets/js/61.0a06d51b.js"><link rel="prefetch" href="/blog/assets/js/62.d43e2aa9.js"><link rel="prefetch" href="/blog/assets/js/63.324d4d98.js"><link rel="prefetch" href="/blog/assets/js/65.6446e418.js"><link rel="prefetch" href="/blog/assets/js/66.8585aa25.js"><link rel="prefetch" href="/blog/assets/js/67.dfeaefd5.js"><link rel="prefetch" href="/blog/assets/js/68.924c834d.js"><link rel="prefetch" href="/blog/assets/js/69.abbce79f.js"><link rel="prefetch" href="/blog/assets/js/7.05726647.js"><link rel="prefetch" href="/blog/assets/js/70.ed425a23.js"><link rel="prefetch" href="/blog/assets/js/71.05125181.js"><link rel="prefetch" href="/blog/assets/js/72.7b1273f0.js"><link rel="prefetch" href="/blog/assets/js/73.7a1c2600.js"><link rel="prefetch" href="/blog/assets/js/74.bb73b474.js"><link rel="prefetch" href="/blog/assets/js/75.2407e93c.js"><link rel="prefetch" href="/blog/assets/js/76.299197e3.js"><link rel="prefetch" href="/blog/assets/js/77.9ec19bb4.js"><link rel="prefetch" href="/blog/assets/js/78.3bb869bc.js"><link rel="prefetch" href="/blog/assets/js/79.6f77bf35.js"><link rel="prefetch" href="/blog/assets/js/8.2d11f171.js"><link rel="prefetch" href="/blog/assets/js/80.02f43f83.js"><link rel="prefetch" href="/blog/assets/js/81.c0d9fa63.js"><link rel="prefetch" href="/blog/assets/js/82.b9491bae.js"><link rel="prefetch" href="/blog/assets/js/83.722b7b32.js"><link rel="prefetch" href="/blog/assets/js/84.93872ad4.js"><link rel="prefetch" href="/blog/assets/js/85.1f86f81d.js"><link rel="prefetch" href="/blog/assets/js/86.fc0605c4.js"><link rel="prefetch" href="/blog/assets/js/87.e1448029.js"><link rel="prefetch" href="/blog/assets/js/88.e53fcbb2.js"><link rel="prefetch" href="/blog/assets/js/89.8f6cfaa6.js"><link rel="prefetch" href="/blog/assets/js/9.798fb69f.js"><link rel="prefetch" href="/blog/assets/js/90.600e1df3.js"><link rel="prefetch" href="/blog/assets/js/91.c6ece35b.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.b6bfb1ac.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">sooxie</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/ios/" class="nav-link router-link-active">
+  iOS
+</a></div><div class="nav-item"><a href="/blog/web/" class="nav-link">
+  前端
+</a></div><div class="nav-item"><a href="/blog/ffmpeg/" class="nav-link">
+  ffmpeg
+</a></div><div class="nav-item"><a href="/blog/opengl/" class="nav-link">
+  OpenGL
+</a></div><div class="nav-item"><a href="/blog/computer/" class="nav-link">
+  基础
+</a></div><div class="nav-item"><a href="/blog/algorithm/" class="nav-link">
+  Algorithm
+</a></div><div class="nav-item"><a href="/blog/version/" class="nav-link">
+  版本控制
+</a></div><div class="nav-item"><a href="/blog/interview/" class="nav-link">
+  面试
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/ios/" class="nav-link router-link-active">
+  iOS
+</a></div><div class="nav-item"><a href="/blog/web/" class="nav-link">
+  前端
+</a></div><div class="nav-item"><a href="/blog/ffmpeg/" class="nav-link">
+  ffmpeg
+</a></div><div class="nav-item"><a href="/blog/opengl/" class="nav-link">
+  OpenGL
+</a></div><div class="nav-item"><a href="/blog/computer/" class="nav-link">
+  基础
+</a></div><div class="nav-item"><a href="/blog/algorithm/" class="nav-link">
+  Algorithm
+</a></div><div class="nav-item"><a href="/blog/version/" class="nav-link">
+  版本控制
+</a></div><div class="nav-item"><a href="/blog/interview/" class="nav-link">
+  面试
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>基础</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Objc</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>多线程</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>内存管理</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/ios/memory/autorelease.html" aria-current="page" class="active sidebar-link">autorelease自动释放池</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/ios/memory/autorelease.html#atautoreleasepool结构" class="sidebar-link">__AtAutoreleasePool结构</a></li><li class="sidebar-sub-header"><a href="/blog/ios/memory/autorelease.html#autoreleasepoolpage" class="sidebar-link">AutoreleasePoolPage</a></li><li class="sidebar-sub-header"><a href="/blog/ios/memory/autorelease.html#autoreleasepoolpage-push" class="sidebar-link">AutoreleasePoolPage::push()</a></li><li class="sidebar-sub-header"><a href="/blog/ios/memory/autorelease.html#autoreleasepoolpage-pop" class="sidebar-link">AutoreleasePoolPage::pop()</a></li><li class="sidebar-sub-header"><a href="/blog/ios/memory/autorelease.html#对象调用autorelease轨迹" class="sidebar-link">对象调用autorelease轨迹</a></li><li class="sidebar-sub-header"><a href="/blog/ios/memory/autorelease.html#" class="sidebar-link"></a></li><li class="sidebar-sub-header"><a href="/blog/ios/memory/autorelease.html#runloop和autorelease" class="sidebar-link">Runloop和Autorelease</a></li></ul></li><li><a href="/blog/ios/memory/layout.html" class="sidebar-link">iOS内存布局</a></li><li><a href="/blog/ios/memory/tagged_pointer.html" class="sidebar-link">Tagged Pointer</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>AVFoundation</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>coreText</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>逆向</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>源码阅读</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="autorelease自动释放池"><a href="#autorelease自动释放池" class="header-anchor">#</a> autorelease自动释放池</h1> <p>首先把OC代码转换成C++代码，看<code>@autoreleasepool {}</code>会变成什么</p> <p>OC代码</p> <div class="language-c extra-class"><pre class="language-c"><code><span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">int</span> argc<span class="token punctuation">,</span> <span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span> argv<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    @autoreleasepool <span class="token punctuation">{</span>
+        Person <span class="token operator">*</span>p <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token punctuation">[</span>Person alloc<span class="token punctuation">]</span> init<span class="token punctuation">]</span> autorelease<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>生成c++代码
+<code>xcrun -sdk iphoneos clang -arch arm64 -rewrite-objc main.m -o main-arm64.cpp</code></p> <div class="language-c extra-class"><pre class="language-c"><code><span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">int</span> argc<span class="token punctuation">,</span> <span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span> argv<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">/* @autoreleasepool */</span> <span class="token punctuation">{</span>
+
+        <span class="token comment">//生成__AtAutoreleasePool对象，调用&lt;构造函数&gt;</span>
+         __AtAutoreleasePool __autoreleasepool<span class="token punctuation">;</span>
+
+        Person <span class="token operator">*</span> p <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>Person <span class="token operator">*</span> <span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">(</span>id<span class="token punctuation">,</span> SEL<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">void</span> <span class="token operator">*</span><span class="token punctuation">)</span>objc_msgSend<span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">(</span>Person <span class="token operator">*</span> <span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">(</span>id<span class="token punctuation">,</span> SEL<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">void</span> <span class="token operator">*</span><span class="token punctuation">)</span>objc_msgSend<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">(</span>Person <span class="token operator">*</span> <span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">(</span>id<span class="token punctuation">,</span> SEL<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">void</span> <span class="token operator">*</span><span class="token punctuation">)</span>objc_msgSend<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token function">objc_getClass</span><span class="token punctuation">(</span><span class="token string">&quot;Person&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">sel_registerName</span><span class="token punctuation">(</span><span class="token string">&quot;alloc&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">sel_registerName</span><span class="token punctuation">(</span><span class="token string">&quot;init&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">sel_registerName</span><span class="token punctuation">(</span><span class="token string">&quot;autorelease&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">//出了大括号销毁__AtAutoreleasePool对象，调用&lt;析构函数&gt;</span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="atautoreleasepool结构"><a href="#atautoreleasepool结构" class="header-anchor">#</a> __AtAutoreleasePool结构</h2> <div class="language-c extra-class"><pre class="language-c"><code><span class="token keyword">struct</span> <span class="token class-name">__AtAutoreleasePool</span> <span class="token punctuation">{</span>
+  <span class="token comment">//构造函数</span>
+  <span class="token function">__AtAutoreleasePool</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    atautoreleasepoolobj <span class="token operator">=</span> <span class="token function">objc_autoreleasePoolPush</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">//析构函数</span>
+  <span class="token operator">~</span><span class="token function">__AtAutoreleasePool</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">objc_autoreleasePoolPop</span><span class="token punctuation">(</span>atautoreleasepoolobj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">void</span> <span class="token operator">*</span> atautoreleasepoolobj<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>从C++代码中main函数中@autoreleasepool可看到</p> <ul><li>1、生成__AtAutoreleasePool对象，调用<strong>构造函数</strong>,进而调用<code>objc_autoreleasePoolPush()</code></li> <li>2、出了大括号销毁__AtAutoreleasePool对象，调用<strong>析构函数</strong>,进而调用<code>objc_autoreleasePoolPop(atautoreleasepoolobj)</code></li></ul> <hr> <p>从Runtime源码NSObject.m可以找到函数调用轨迹</p> <div class="language-c extra-class"><pre class="language-c"><code><span class="token keyword">void</span> <span class="token operator">*</span>
+<span class="token function">objc_autoreleasePoolPush</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">return</span> AutoreleasePoolPage<span class="token operator">::</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">void</span>
+<span class="token function">objc_autoreleasePoolPop</span><span class="token punctuation">(</span><span class="token keyword">void</span> <span class="token operator">*</span>ctxt<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    AutoreleasePoolPage<span class="token operator">::</span><span class="token function">pop</span><span class="token punctuation">(</span>ctxt<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>可见__AtAutoreleasePool是一个辅助对象，最终管理autorelease的是<strong>AutoreleasePoolPage</strong></p> <h2 id="autoreleasepoolpage"><a href="#autoreleasepoolpage" class="header-anchor">#</a> AutoreleasePoolPage</h2> <p>主要<strong>成员变量</strong>和<strong>方法</strong></p> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token keyword">class</span> <span class="token class-name">AutoreleasePoolPage</span> 
+<span class="token punctuation">{</span>
+<span class="token macro property"><span class="token directive-hash">#</span>   <span class="token directive keyword">define</span> <span class="token macro-name">POOL_BOUNDARY</span> <span class="token expression">nil</span></span>
+    magic_t <span class="token keyword">const</span> magic<span class="token punctuation">;</span> <span class="token comment">// 用来校验 AutoreleasePoolPage 的结构是否完整</span>
+    id <span class="token operator">*</span>next<span class="token punctuation">;</span> <span class="token comment">//指向最新添加的 autorelease 对象的下一个位置，初始化时指向 begin()</span>
+    pthread_t <span class="token keyword">const</span> thread<span class="token punctuation">;</span> <span class="token comment">//指向当前线程；</span>
+    AutoreleasePoolPage <span class="token operator">*</span> <span class="token keyword">const</span> parent<span class="token punctuation">;</span> <span class="token comment">//指向父结点，第一个结点的 parent 值为 nil</span>
+    AutoreleasePoolPage <span class="token operator">*</span>child<span class="token punctuation">;</span> <span class="token comment">//child 指向子结点，最后一个结点的 child 值为 nil</span>
+    <span class="token keyword">uint32_t</span> <span class="token keyword">const</span> depth<span class="token punctuation">;</span> <span class="token comment">//代表深度，从 0 开始，往后递增 1</span>
+    <span class="token keyword">uint32_t</span> hiwat<span class="token punctuation">;</span> <span class="token comment">//代表 high water mark 。</span>
+    
+    <span class="token comment">//从begin指针存放oc对象的内存地址</span>
+    id <span class="token operator">*</span> <span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">//sizeof(*this)自己成员变量大小 ，begin = 自己的内存地址（始址）+  自己成员变量大小</span>
+        <span class="token keyword">return</span> <span class="token punctuation">(</span>id <span class="token operator">*</span><span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token keyword">uint8_t</span> <span class="token operator">*</span><span class="token punctuation">)</span><span class="token keyword">this</span><span class="token operator">+</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token comment">//</span>
+    id <span class="token operator">*</span> <span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// SIZE = 4096 , end = 自己的内存地址（始址）+ 自己内存大小</span>
+        <span class="token keyword">return</span> <span class="token punctuation">(</span>id <span class="token operator">*</span><span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token keyword">uint8_t</span> <span class="token operator">*</span><span class="token punctuation">)</span><span class="token keyword">this</span><span class="token operator">+</span>SIZE<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">bool</span> <span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> next <span class="token operator">==</span> <span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">bool</span> <span class="token function">full</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+        <span class="token keyword">return</span> next <span class="token operator">==</span> <span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+
+
+<span class="token punctuation">}</span>  
+</code></pre></div><ul><li>begin：begin指针开始存放OC对象地址</li> <li>end：end指向AutoreleasePoolPage对象尾部（对象最高地址）</li> <li>next：next指针指向autorelease对象的下一个位置</li> <li>每个AutoreleasePoolPage对象占用4096字节内存，除了用来存放它内部的成员变量，剩下的空间用来存放autorelease对象的地址</li> <li>AutoreleasePoolPage从begin指针开始存放OC对象地址，next指针指向autorelease对象的下一个位置，AutoreleasePoolPage装满（next == end()）时创建新的AutoreleasePoolPage</li> <li>所有AutoreleasePoolPage对象通过双向链表的形式连接在一起</li> <li>调用AutoreleasePoolPage::push()方法会将一个POOL_BOUNDARY入栈，并且返回其存放的内存地址(返回上面C++代码main中atautoreleasepoolobj)</li> <li>调用AutoreleasePoolPage::pop方法时传入一个POOL_BOUNDARY的内存地址(传入上面C++代码main中atautoreleasepoolobj)，会从最后一个入栈的对象开始发送release消息，直到遇到这个POOL_BOUNDARY</li></ul> <h2 id="autoreleasepoolpage-push"><a href="#autoreleasepoolpage-push" class="header-anchor">#</a> AutoreleasePoolPage::push()</h2> <div class="language-cpp extra-class"><pre class="language-cpp"><code>  <span class="token keyword">static</span> <span class="token keyword">inline</span> <span class="token keyword">void</span> <span class="token operator">*</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 
+    <span class="token punctuation">{</span>
+        id <span class="token operator">*</span>dest<span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>DebugPoolAllocation<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment">// Each autorelease pool starts on a new pool page.</span>
+            dest <span class="token operator">=</span> <span class="token function">autoreleaseNewPage</span><span class="token punctuation">(</span>POOL_BOUNDARY<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token comment">//  </span>
+            dest <span class="token operator">=</span> <span class="token function">autoreleaseFast</span><span class="token punctuation">(</span>POOL_BOUNDARY<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token function">assert</span><span class="token punctuation">(</span>dest <span class="token operator">==</span> EMPTY_POOL_PLACEHOLDER <span class="token operator">||</span> <span class="token operator">*</span>dest <span class="token operator">==</span> POOL_BOUNDARY<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> dest<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+</code></pre></div><ul><li>首次push() 方法会把POOL_BOUNDARY（值为nil）入栈到begin所指地址。</li></ul> <table><thead><tr><th>begin</th> <th>-</th> <th>-</th></tr></thead> <tbody><tr><td>POOL_BOUNDARY</td> <td>obj1</td> <td>obj2</td></tr></tbody></table> <h4 id="嵌套的autoreleasepool"><a href="#嵌套的autoreleasepool" class="header-anchor">#</a> 嵌套的autoreleasepool</h4> <div class="language- extra-class"><pre class="language-text"><code>int main(int argc, const char * argv[]) {
+    @autoreleasepool {
+        Person *p1 = [[[Person alloc] init] autorelease];
+        
+        @autoreleasepool {
+            Person *p2 = [[[Person alloc] init] autorelease];
+       }
+    }
+    return 0;
+}
+</code></pre></div><ul><li>每一个@autoreleasepool会调用一次AutoreleasePoolPage::push(),插入POOL_BOUNDARY哨兵</li></ul> <table><thead><tr><th>begin</th> <th>-</th> <th>-</th> <th>-</th></tr></thead> <tbody><tr><td>POOL_BOUNDARY</td> <td>p1</td> <td>POOL_BOUNDARY</td> <td>p2</td></tr></tbody></table> <h2 id="autoreleasepoolpage-pop"><a href="#autoreleasepoolpage-pop" class="header-anchor">#</a> AutoreleasePoolPage::pop()</h2> <ul><li>调用AutoreleasePoolPage::pop方法时传入一个POOL_BOUNDARY的内存地址(传入上面C++代码main中atautoreleasepoolobj)，会从最后一个入栈的对象开始发送release消息，直到遇到这个POOL_BOUNDARY</li></ul> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token keyword">static</span> <span class="token keyword">inline</span> <span class="token keyword">void</span> <span class="token function">pop</span><span class="token punctuation">(</span><span class="token keyword">void</span> <span class="token operator">*</span> token<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  AutoreleasePoolPage <span class="token operator">*</span> page<span class="token punctuation">;</span>
+  id <span class="token operator">*</span> stop<span class="token punctuation">;</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>token <span class="token operator">==</span> <span class="token punctuation">(</span><span class="token keyword">void</span> <span class="token operator">*</span> <span class="token punctuation">)</span> EMPTY_POOL_PLACEHOLDER<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Popping the top-level placeholder pool.</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">hotPage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// Pool was used. Pop its contents normally.</span>
+      <span class="token comment">// Pool pages remain allocated for re-use as usual.</span>
+      <span class="token function">pop</span><span class="token punctuation">(</span><span class="token function">coldPage</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token operator">&gt;</span> <span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      <span class="token comment">// Pool was never used. Clear the placeholder.</span>
+      <span class="token function">setHotPage</span><span class="token punctuation">(</span>nil<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  page <span class="token operator">=</span> <span class="token function">pageForPointer</span><span class="token punctuation">(</span>token<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  stop <span class="token operator">=</span> <span class="token punctuation">(</span>id <span class="token operator">*</span> <span class="token punctuation">)</span> token<span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span> <span class="token operator">*</span> stop <span class="token operator">!=</span> POOL_BOUNDARY<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>stop <span class="token operator">==</span> page <span class="token operator">-</span> <span class="token operator">&gt;</span> <span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>page <span class="token operator">-</span> <span class="token operator">&gt;</span> parent<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// Start of coldest page may correctly not be POOL_BOUNDARY:</span>
+      <span class="token comment">// 1. top-level pool is popped, leaving the cold page in place</span>
+      <span class="token comment">// 2. an object is autoreleased with no pool</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      <span class="token comment">// Error. For bincompat purposes this is not </span>
+      <span class="token comment">// fatal in executables built with old SDKs.</span>
+      <span class="token keyword">return</span> <span class="token function">badPop</span><span class="token punctuation">(</span>token<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>PrintPoolHiwat<span class="token punctuation">)</span> <span class="token function">printHiwat</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  page <span class="token operator">-</span> <span class="token operator">&gt;</span> <span class="token function">releaseUntil</span><span class="token punctuation">(</span>stop<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// memory: delete empty children</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>DebugPoolAllocation <span class="token operator">&amp;&amp;</span> page <span class="token operator">-</span> <span class="token operator">&gt;</span> <span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// special case: delete everything during page-per-pool debugging</span>
+    AutoreleasePoolPage <span class="token operator">*</span> parent <span class="token operator">=</span> page <span class="token operator">-</span> <span class="token operator">&gt;</span> parent<span class="token punctuation">;</span>
+    page <span class="token operator">-</span> <span class="token operator">&gt;</span> <span class="token function">kill</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">setHotPage</span><span class="token punctuation">(</span>parent<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>DebugMissingPools <span class="token operator">&amp;&amp;</span> page <span class="token operator">-</span> <span class="token operator">&gt;</span> <span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>page <span class="token operator">-</span> <span class="token operator">&gt;</span> parent<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// special case: delete everything for pop(top) </span>
+    <span class="token comment">// when debugging missing autorelease pools</span>
+    page <span class="token operator">-</span> <span class="token operator">&gt;</span> <span class="token function">kill</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">setHotPage</span><span class="token punctuation">(</span>nil<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>page <span class="token operator">-</span> <span class="token operator">&gt;</span> child<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// hysteresis: keep one empty child if page is more than half full</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>page <span class="token operator">-</span> <span class="token operator">&gt;</span> <span class="token function">lessThanHalfFull</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      page <span class="token operator">-</span> <span class="token operator">&gt;</span> child <span class="token operator">-</span> <span class="token operator">&gt;</span> <span class="token function">kill</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>page <span class="token operator">-</span> <span class="token operator">&gt;</span> child <span class="token operator">-</span> <span class="token operator">&gt;</span> child<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      page <span class="token operator">-</span> <span class="token operator">&gt;</span> child <span class="token operator">-</span> <span class="token operator">&gt;</span> child <span class="token operator">-</span> <span class="token operator">&gt;</span> <span class="token function">kill</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="对象调用autorelease轨迹"><a href="#对象调用autorelease轨迹" class="header-anchor">#</a> 对象调用autorelease轨迹</h2> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token operator">-</span> <span class="token punctuation">(</span>id<span class="token punctuation">)</span>autorelease <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span>self<span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">rootAutorelease</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token keyword">inline</span> id 
+objc_object<span class="token double-colon punctuation">::</span><span class="token function">rootAutorelease</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">isTaggedPointer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token keyword">this</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">prepareOptimizedReturn</span><span class="token punctuation">(</span>ReturnAtPlus1<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token keyword">this</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token function">rootAutorelease2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token function">__attribute__</span><span class="token punctuation">(</span><span class="token punctuation">(</span>noinline<span class="token punctuation">,</span>used<span class="token punctuation">)</span><span class="token punctuation">)</span>
+id 
+objc_object<span class="token double-colon punctuation">::</span><span class="token function">rootAutorelease2</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token function">assert</span><span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">isTaggedPointer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token class-name">AutoreleasePoolPage</span><span class="token double-colon punctuation">::</span><span class="token function">autorelease</span><span class="token punctuation">(</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>最终会调用AutoreleasePoolPage::autorelease方法,把obj对象存入自己内存中管理</p> <div class="language-cpp extra-class"><pre class="language-cpp"><code> <span class="token keyword">static</span> <span class="token keyword">inline</span> id <span class="token function">autorelease</span><span class="token punctuation">(</span>id obj<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token function">assert</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token function">assert</span><span class="token punctuation">(</span><span class="token operator">!</span>obj <span class="token operator">-</span> <span class="token operator">&gt;</span> <span class="token function">isTaggedPointer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   id <span class="token operator">*</span> dest __unused <span class="token operator">=</span> <span class="token function">autoreleaseFast</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token function">assert</span><span class="token punctuation">(</span><span class="token operator">!</span>dest <span class="token operator">||</span> dest <span class="token operator">==</span> EMPTY_POOL_PLACEHOLDER <span class="token operator">||</span> <span class="token operator">*</span> dest <span class="token operator">==</span> obj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token keyword">return</span> obj<span class="token punctuation">;</span>
+ <span class="token punctuation">}</span>
+
+</code></pre></div><h2 id=""><a href="#" class="header-anchor">#</a></h2> <h2 id="runloop和autorelease"><a href="#runloop和autorelease" class="header-anchor">#</a> Runloop和Autorelease</h2> <p>在主线程的Runloop中注册了2个Observer</p> <ul><li>第1个Observer监听了kCFRunLoopEntry事件，会调用objc_autoreleasePoolPush()</li> <li>第2个Observer
+<ul><li>监听了kCFRunLoopBeforeWaiting事件，会调用objc_autoreleasePoolPop()、objc_autoreleasePoolPush()</li> <li>监听了kCFRunLoopBeforeExit事件，会调用objc_autoreleasePoolPop()</li></ul></li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/ios/gcd/safe.html" class="prev">
+        线程同步
+      </a></span> <span class="next"><a href="/blog/ios/memory/layout.html">
+        iOS内存布局
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/blog/assets/js/app.2b1dd648.js" defer></script><script src="/blog/assets/js/2.9d35f1e7.js" defer></script><script src="/blog/assets/js/64.04ef7635.js" defer></script>
+  </body>
+</html>
